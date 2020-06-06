@@ -3,17 +3,14 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { page: 'Home', menuId: 'home' });
 });
 
 router.get('/blog', function (req, res, next) {
   res.render('blog', { title: 'blog' });
 });
 router.get('/therapists', function (req, res, next) {
-  res.render('therapists', { title: 'Therapists' });
-});
-router.get('/blog', function (req, res, next) {
-  res.render('blog', { title: 'blog' });
+  res.render('therapists', { page: 'Our Therapists', menuId: 'therapists' });
 });
 
 module.exports = router;
