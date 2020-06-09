@@ -10,8 +10,10 @@ router.get('/', userController.home);
 router.get('/register', userController.register);
 router.get('/login', userController.login);
 
+router.get('/blog-guest', userController.blogGuest);
+
 router.get('/blog', function (req, res, next) {
-  res.render('blog', { title: 'blog', menuId: 'blog' });
+  res.render('blog', { page: 'blog', menuId: 'blog' });
 });
 router.get('/therapists', function (req, res, next) {
   res.render('therapists', { page: 'Our Therapists', menuId: 'therapists' });
